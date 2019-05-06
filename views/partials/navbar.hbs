@@ -1,0 +1,40 @@
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+			<a class="site-logo" href="/">
+				<img src="../img/logo.png" alt="">
+			</a>
+			<div class="user-panel">
+				<a href="login">ACCESS</a>  <!--/  <a href="login">Register</a>-->
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<!-- site menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="searchResults">Player List</a></li>
+					<li><a href="search">Search</a></li>
+          <li>
+          <a href="contact">Contact</a>
+          </li>
+      {{#if session}}
+        <li class="nav-item active">
+          <a class="nav-link" href="/profile">MyProfile <span class="sr-only">(current)</span></a>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" href="/logout">Click to Logout<span class="sr-only">(current)</span></a>
+        </li>
+      <!--<li class="nav-item active">
+        <a class="nav-link" href="/player/{{session._id}}/edit">MyProfile <span class="sr-only">(current)</span></a>
+      </li>--><!--PRUEBA PROFILE-->
+      {{/if}}
+
+			</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
