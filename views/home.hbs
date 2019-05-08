@@ -13,71 +13,9 @@
 						<h2>Search <span>Players</span> and play!</h2>
 						<p>Find players and make friends playing in your favourites games.</p>
 						<!--<a href="#" class="site-btn">Read More</a>-->
-						<form action="/search" method="GET">
-  </div>
-     <div class="form-group col-md-4">
-    <label for="inputNick">Nick</label>
-    <input name="nick"type="text" class="form-control" id="inputNick" placeholder="Be original">
-  </div>
-    <div class="form-group col-md-4">
-    <label for="inputNickName">Nick In Game</label>
-    <input name="nickInGame"type="text" class="form-control" id="inputNickInGame" placeholder="Your nick inside the game">
-  </div>
-   <div class="form-group col-md-4">
-      <label for="inputCountry">Country</label>
-      <select name="country"id="inputCountry" class="form-control">
-        <option selected>Select your Country</option>
-        <option>Spain</option>
-        <option>France</option>
-        <option>Germany</option>
-      </select>
-    </div>
-      <div class="form-group col-md-4">
-      <label for="inputGame">Game</label>
-      <select name="game"id="inputGame" class="form-control">
-        <option selected>Choose Worm!</option>
-        <option>Fortnite</option>
-        <option>Clash Royale</option>
-        <option>CS:GO</option>
-      </select>
-    </div>
-  <div >
-    <!--<div class="form-group col-md-4">
-      <label for="inputLevel">Level ingame</label>
-      <input  name="levelInGame"type="text" class="form-control" id="inputLevel" placeholder="85">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputGoal">Goal</label>
-      <select id="inputGoal" class="form-control">
-        <option selected>Choose Worm!</option>
-        <option>Profesional</option>
-        <option>Hardcore</option>
-        <option>Casual</option>
-      </select>
-    </div>
-  <div class="form-group col-md-4">
-      <label for="languages">Language</label>
-      <select id="inputLanguages" class="form-control">
-        <option selected>Choose Worm!</option>
-        <option>ES</option>
-        <option>ENG</option>
-        <option>RU</option>
-      </select>
-    </div>
-<div class="form-group col-md-4">
-  <label for="languages">Player schedule</label>
-  <select class="custom-select" multiple>
-  <option selected>Game Schedule</option>
-  <option value="1">Morning</option>
-  <option value="2">Afternoon</option>
-  <option value="3">Night</option>
-  </select>
-</div>-->
-<div class="form-group col-md-12">
-  <button type="reset" class="btn btn-primary">Reset</button>
-  <button type="submit" class="btn btn-primary">Search</button>
-</div>
-</form>
+					<form action="/search" method="GET">
+    				<input name="freeField" type="text" class="form-control" id="inputNick" placeholder="search...">
+					</form>
 					</div>
 				</div>
 			</div>
@@ -99,12 +37,14 @@
 
 	<!-- Latest news section -->
 	<div class="latest-news-section">
-		<div class="ln-title">Latest News</div>
+		<div class="ln-title">Latest Players</div>
 		<div class="news-ticker">
 			<div class="news-ticker-contant">
-				<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+				{{#each players as |player|}}
+				<div class="nt-item"><span class="new">new</span>{{player.nick}}</div>
+				<!--<div class="nt-item"><span class="strategy">strategy</span>{{player.nick}}</div>
+				<div class="nt-item"><span class="racing">racing</span>{{player.nick}}</div>-->
+			{{/each}}
 			</div>
 		</div>
 	</div>

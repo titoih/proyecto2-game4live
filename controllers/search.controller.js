@@ -2,7 +2,7 @@ const createError = require('http-errors')
 const mongoose = require('mongoose')
 const Player = require('../models/player.model');
 
-module.exports.list = ((req, res, next) => {
+module.exports.list = (req, res, next) => {
 //   const search = req.query;
 //   Player.find({$or:[{nick:search.nick}, {nickInGame: search.nickInGame},
 //   {country:search.country},{game:search.game}]})
@@ -17,7 +17,7 @@ Player.find({})
   res.render('search/searchResults', {players})
 })
 .catch(error => next(error))
-})
+}
 
 module.exports.searchForm = (req, res, next) => {
     
@@ -31,7 +31,17 @@ module.exports.searchForm = (req, res, next) => {
         res.render('search/search', {players})
       })
       .catch(error => next(error)) 
-     } else {
+     
+    } else if(search.freeField) {
+        Player.find({$or:[{nick:search.freeField}, {nickInGame: search.freeField},
+          {country:search.freeField},{game:search.freeField}]})
+      
+            .then( players => {
+              res.render('search/search', {players})
+            })
+            .catch(error => next(error))
+
+      } else {
     Player.find({})
       .then( players => {
         res.render('search/search', {players})

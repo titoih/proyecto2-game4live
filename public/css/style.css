@@ -102,7 +102,7 @@ ol {
 }
 
 .spad {
-	padding-top: 97px;
+	padding-top: 35px;
 	padding-bottom: 97px;
 }
 
@@ -314,7 +314,8 @@ ol {
 ---------------------*/
 
 .hero-slider .hs-item {
-	height: 865px;
+	/*height: 865px;*/
+	height: 100vh;
 	display: table;
 	width: 100%;
 }
@@ -654,8 +655,16 @@ ol {
   Review Section
 ------------------------*/
 
+.review-item {
+	width: 100%;
+}
+
 .review-section {
 	background-position: right top;
+}
+
+.review-section.spad.set-bg {
+	background-image: url('../img/review-bg.png');
 }
 
 .review-item .review-cover {
@@ -1512,4 +1521,39 @@ ol {
 	.page-info-section .pi-content h2 {
 		font-size: 40px;
 	}
+}
+
+.player-search {
+	text-align: center;
+	background-image: url(/img/pattern.png);
+	background-repeat: repeat;
+}
+
+.player-search form {
+	background-color: white;
+
+}
+
+.buttons-search-blue {
+	margin-top: 1em;
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.h2-search-player {
+	background-color: white;
+}
+
+.h2-player-list {
+	color:#f9b21f;
+}
+.bg-player-list {
+		width: 30%;
+    margin: 5px 0;
+    float: left;
+    margin: 10px;
+    padding: 40px 30px 7px;
+    background: #252525;
+    border: 1px solid #4a4a4a;
+    color: white;
 }

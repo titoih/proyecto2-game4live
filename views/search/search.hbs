@@ -1,9 +1,9 @@
+<div class="player-search">
 <!-- crear el formulario de búsqueda-->
-<h2>Search a player</h2>
+<h2 class="h2-search-player">Search a player</h2>
 {{!-- players --}}
 
 <form action="/search" method="GET">
-  </div>
      <div class="form-group col-md-4">
     <label for="inputNick">Nick</label>
     <input name="nick"type="text" class="form-control" id="inputNick" placeholder="Be original">
@@ -30,62 +30,38 @@
         <option>CS:GO</option>
       </select>
     </div>
-  <div >
-    <!--<div class="form-group col-md-4">
-      <label for="inputLevel">Level ingame</label>
-      <input  name="levelInGame"type="text" class="form-control" id="inputLevel" placeholder="85">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputGoal">Goal</label>
-      <select id="inputGoal" class="form-control">
-        <option selected>Choose Worm!</option>
-        <option>Profesional</option>
-        <option>Hardcore</option>
-        <option>Casual</option>
-      </select>
-    </div>
-  <div class="form-group col-md-4">
-      <label for="languages">Language</label>
-      <select id="inputLanguages" class="form-control">
-        <option selected>Choose Worm!</option>
-        <option>ES</option>
-        <option>ENG</option>
-        <option>RU</option>
-      </select>
-    </div>
-<div class="form-group col-md-4">
-  <label for="languages">Player schedule</label>
-  <select class="custom-select" multiple>
-  <option selected>Game Schedule</option>
-  <option value="1">Morning</option>
-  <option value="2">Afternoon</option>
-  <option value="3">Night</option>
-  </select>
-</div>-->
+  <div class="buttons-search-blue">
 <div class="form-group col-md-12">
   <button type="reset" class="btn btn-primary">Reset</button>
   <button type="submit" class="btn btn-primary">Search</button>
 </div>
 </form>
+</div>
 
-{{#if error}}
-  <div style="border:red solid 2px">{{error.message}}</div>
-{{/if}} 
-<div class="div-player-list">
- <h2>Players list</h2>
+	<section class="review-section spad set-bg" data-setbg="../img/review-bg.png">
+		<div class="container">
+			<!--<div class="section-title">
+				<div class="cata new">new</div>
+				<h2>Recent Reviews</h2>
+			</div>-->
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="../img/review/1.jpg">
+            <div class="div-player-list">
+ <h2 class="h2-player-list">Players list</h2>
 <div>
 {{#unless players}}
- <h3>No results, try another criteria or go fuck yourself</h3>
+ <h3>No results, try another criteria</h3>
 {{/unless}} 
 
   {{#each players as |player|}}
-    <div style="border: black solid 2px; padding: 10px; width: 30%; margin: 5px 0;float:left; margin:10px">
+    <div class="bg-player-list">
       </form>
-     
-  <div class="panel panel-default">
-    <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
-    {{#if avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="{{player.avatarURL}}"> </div>{{/if}} 
-    {{#unless avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="https://2static1.fjcdn.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg"> </div>{{/unless}} 
+      <div class="panel panel-default">
+      <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+      {{#if avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="{{player.avatarURL}}"> </div>{{/if}} 
+      {{#unless avatarURL}}<div class="panel-body"><img style="width:75px;height:75px" src="https://2static1.fjcdn.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg"> </div>{{/unless}} 
 
     <div class="panel-body">Nick in Game:{{player.nickInGame}} </div>
     <div class="panel-body">Country:{{player.country}}</div>
@@ -101,4 +77,13 @@
   {{/each}}
 </div>
 </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{{#if error}}
+  <div style="border:red solid 2px">{{error.message}}</div>
+{{/if}} 
+
 
