@@ -11,11 +11,14 @@ require('./config/db.config');
 require('./config/hbs.config');
 const session = require('./config/session.config');
 require('./config/passport.config');
+require('./config/db.cloudinary');
+
 
 const mainRouter = require('./routes/main.routes');
 const authRouter = require('./routes/auth.routes');
 const searchRouter = require('./routes/search.routes');
 const playerRouter = require('./routes/player.routes');
+const uploadRouter = require('./routes/picture.routes')
 
 const app = express();
 
@@ -42,6 +45,7 @@ app.use('/', mainRouter);
 app.use('/', authRouter);
 app.use('/', searchRouter);
 app.use('/player', playerRouter);
+app.use('/upload', uploadRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

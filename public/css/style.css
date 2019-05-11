@@ -257,8 +257,9 @@ ol {
 
 .site-logo {
 	display: inline-block;
-	float: left;
+	float:left;
 	padding-top: 6px;
+	width: 200px;
 }
 
 .user-panel {
@@ -1557,3 +1558,153 @@ ol {
     border: 1px solid #4a4a4a;
     color: white;
 }
+
+/* STYLES ANTIGUOS */
+
+.login-google{
+  width:50%;
+  background-color: #f8f9fa;
+  margin: auto;
+}
+
+.login-google-content {
+  margin: auto;
+}
+
+.login-google-content h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+.login-google-content a {
+  width:50%;
+  margin: auto;
+}
+
+.login-text {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.div-player-account {
+  text-align: center;
+}
+
+.div-form-player-account {
+  width:75%;
+  margin:auto;
+}
+
+#form-player-account {
+  width: 300px;
+  margin: auto;
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 1em;
+}
+
+#button-player-account {
+	width: 100%;
+	background: #f9b21f;
+}
+
+.hello-player-account {
+  color:blue;
+  text-decoration: aqua;
+}
+
+.div-player-list {
+  clear: both;
+}  
+
+/* FIN STYLES ANTIGUOS */
+
+#leftPanel{
+	/*background-color:#0079ac;
+	color:#fff;
+	text-align: center;*/
+		text-align: center;
+    border: none;
+    background: none;
+    box-shadow: none;
+
+}
+
+#rightPanel{
+	min-height:415px;
+	background-image: url(../img/pattern.png);
+	background-repeat: repeat;
+	color: white;
+}
+
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+height: 5px;
+border-top: 0;
+background: #c4e17f;
+border-radius: 5px;
+background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+#div-player-search {
+	width: 100%;
+}
+
+#div-container-home {
+	width:100%;
+}
+
+/* carlos updated*/
+.white{
+	color:white;
+}
+
+.b {
+	font-weight: bold;
+	margin-left:20px;
+}
+.cards{
+	padding: 10px;
+	width: 23%; 
+	margin: 15px 0;
+	float:left; 
+	margin:10px;
+}
+.avatar{
+	width:75px;
+	height:75px;
+	margin-left:35%;
+	position:relative;
+}
+.background{
+	background-image: url("../img/review-bg-2.jpg");
+	height:400px;
+	background-size:cover;
+	padding-top:50px;
+	
+}
+.fondo2{
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat;
+	height: 1700px;
+	margin-top: 280px;
+}
+.headerCards{
+	background:rgba(173, 216, 230, 0.39);
+	margin-top:25px;
+	color:black;
+}
+.center{
+	 text-align: center;
+}
+.fondo3{
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat;
+	height: 2000px;
+	
+}
+
+/* carlos updated*/

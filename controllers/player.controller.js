@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const createError = require('http-errors');
 const Player = require('../models/player.model');
 
 
@@ -13,7 +12,7 @@ module.exports.detail = (req, res, next) => {
   }
 
 module.exports.account = (req, res, next) => {
-
+    
     Player.findOne({email:req.user.email})
       .then(player => {
         res.render('player/account', { player })
@@ -32,6 +31,9 @@ module.exports.account = (req, res, next) => {
   
   module.exports.doEdit = (req, res, next) => {
     const player = req.user;
+    const { nick, nickInGame, country, game } = req.body;
+
+    console.log(req.file)
     function renderWithErrors(errors) {
       res.render('player/account', {
         player,
@@ -40,41 +42,34 @@ module.exports.account = (req, res, next) => {
       })
     }
 
-    Object.assign(player, req.body);
-    player.save()
-      .then(player => res.redirect('/profile'))
-      .catch(error => {
-        if (error instanceof mongoose.Error.ValidationError) {
-          renderWithErrors(error.errors);
+    if(req.file) {
+      const imgPath = req.file.url;
+      const imgName = req.file.originalname;
+      Object.assign(player, {nick, nickInGame, country, game, imgPath, imgName});
+      player.save()
+        .then(player => res.redirect('/player'))
+        .catch(error => {
+          if (error instanceof mongoose.Error.ValidationError) {
+            renderWithErrors(error.errors);
+          } else {
+            next(error);
+          }
+        });
+      
         } else {
-          next(error);
-        }
-      });
+      Object.assign(player, {nick, nickInGame, country, game});
+      player.save()
+          .then(player => res.redirect('/player'))
+          .catch(error => {
+            if (error instanceof mongoose.Error.ValidationError) {
+              renderWithErrors(error.errors);
+            } else {
+              next(error);
+            }
+          });
+    }
+
+
     
     
   }
-    
-    //  .then(player => res.redirect('/player'))
-    //  .catch(error => {
-    //    if(error instanceof mongoose.Error.ValidationError) {
-    //      console.log('error')
-    //      res.render('player/account', {
-    //        player: req.body,
-    //        errors: error.errors
-    //      })
-    //    } else {
-    //      console.log('error')
-    //      next(error);
-    //      }
-    //  })
-  
-  //const id = req.params.id;
-  //const update = req.body;
-  //  Player.findByIdAndUpdate(id, update)
-  //    .then( () => {
-  //      res.redirect('/player')
-  //    })
-  //    .catch(error => next(error))
-
-
-  //const id = req.user._id;//profe: no es mejor pasar por post sin id¿?

@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require('bcrypt');
-//const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const SALT_WORK_FACTOR = 10;
 
-const constants = require('../constants-players')//para traerse campos cerrados
+const constants = require('../constants-players')
 const GOAL_TYPES = constants.GOAL_TYPES
 const LANGUAGES_LIST = constants.LANGUAGES_LIST
 const SCHEDULES_LIST = constants.SCHEDULES_LIST
@@ -21,6 +20,8 @@ const playerSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
+  imgName: String,
+  imgPath: String,
   nick: {
     type: String,
     unique: true,

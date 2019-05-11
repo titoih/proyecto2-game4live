@@ -54,31 +54,10 @@ module.exports.doLogin = (req, res, next) => {
 }
 
 module.exports.showProfile = (req, res,next) => {
-  res.render('player/profile');
+  res.render('player/account');
 }
 
 module.exports.logout = (req, res, next) => {
   req.logout();
   res.redirect('/login');
 }
-
-/*module.exports.doLogin = (req, res, next) => {
-  passport.authenticate('local-auth', (error, player, validation) => {
-    if(error) {
-      next(error);
-    } else if (!player) {
-      res.render('auth/register', {
-        player: req.body,
-        errors: validation
-      })
-    } else {
-      return req.login(player, (error) => {
-        if(error) {
-          next(error)
-        } else {
-          res.redirect('/player')
-        }
-      })
-    }
-  })(req, res, next);
-}*/

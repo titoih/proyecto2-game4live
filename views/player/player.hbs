@@ -1,5 +1,64 @@
-<h2>{{player.nick}}</h2>
-<p>Player nick: {{player.nick}}</p>
-<p>Player nickInGame: {{player.nickInGame}}</p>
+<div class="container">
+<br>
+<br>
+	<div class="row" id="main">
+        <div class="col-md-4 well" id="leftPanel">
+            <div class="row">
+                <div class="col-md-12">
+                	<div>
+                {{#if player.imgPath}}<img src="{{player.imgPath}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/if}}
+        				{{#unless player.imgPath}} <img src="{{player.avatarURL}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/unless}}
+                  
+        			</div>
+        		</div>
+            </div>
+        </div>
+        <div class="col-md-8 well" id="rightPanel">
+            <div class="row">
+        <div class="col-md-12">
+          <!-- FORM -->
+         <form role="form" action="/player" method="POST" enctype="multipart/form-data">
+		     <h2>Nick: {{player.nick}}</h2>
+			     <hr class="colorgraph">
+			          <div class="row">
+				          <div class="col-xs-12 col-sm-6 col-md-6">
+					          <div class="form-group">
+                      <label for="inputNick">Nick In Game: </label><label class="label-player">{{player.nickInGame}}</label>
+                    </div>
+				          </div>
+				          <div class="col-xs-12 col-sm-6 col-md-6">
+					          <div class="form-group">
+                      <label for="inputNickName">Nick In Game</label>
+                      </div>
+				          </div>
+			          </div>
+     <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+		     <div class="form-group">
+          <label for="inputCountry">Country: </label><label class="label-player">{{player.country}}</label>
+                   </div>
+          </div>
+     </div>
+      <div class="row">
+	     <div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+      <label for="inputGame">Game</label><label class="label-player">{{player.game}}</label>
+      </div>
+		</div>
+	</div>
+</div>
+</div>
+	<hr class="colorgraph">
+	<div class="row">
+	     <div class="col-xs-12 col-md-6"><button id="button-player-account" class="btn btn-primary" type="submit">Save</button></div>
+	</div>
+          <!-- FORM -->
+          </form>
+</div>
+</div>
+</div>
+</div>
+</div>       
+</div>
 <a class="btn btn-primary" href="/searchResults">Back to the players list</a>
 <a class="btn btn-primary" href="/player/{{player._id}}/edit">Edit your profile</a>  

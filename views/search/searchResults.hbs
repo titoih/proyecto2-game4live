@@ -1,24 +1,16 @@
-<!-- crear el listado de resultados de búsqueda-->
-
- <h2>Players list</h2>
-<div>
+<div class='fondo3'>
+  {{!-- segunda parte --}}
   {{#each players as |player|}}
-    <div style="border: black solid 2px; padding: 10px; width: 80%; margin: 5px 0;">
-      </form>
-     
-  <div class="panel panel-default">
-    <div style="background:lightblue" class="panel-heading"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
-    <div class="panel-body">Nick in Game:{{player.nickInGame}} </div>
-    <div class="panel-body">Country:{{player.country}} </div>
-    <div class="panel-body">Game:{{player.game}} </div>
-  </div>
-
-  <div>
-        <a class="btn btn-success" style="margin: 5px" href="/player/{{player._id}}">View profile</a>
- </div>
-</div>
-
-</div>
+    <div class="cards">
+     <div class="panel panel-default" style="background:grey">
+      <div style="background:rgba(56, 55, 55, 0.555)" class="panel-heading font-weight-bold center"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+       {{#if avatarURL}}<div class="panel-body b"><img class="avatar img-circle" src="{{player.avatarURL}}"> </div>{{/if}} 
+       {{#unless avatarURL}}<div class="panel-body b"><img class="avatar img-circle"src="../img/watgranma.jpg"> </div>{{/unless}} 
+        <div class="panel-body"><a class="b">Nick In Game:</a> {{player.nickInGame}} </div>
+        <div class="panel-body"><a class="b">Country:</a> {{player.country}}</div>
+        <div class="panel-body "> <a class="b">Game:</a> {{player.game}} </div>
+        <div><a class="btn btn-primary btn-block" style="" href="/player/{{player._id}}">View profile</a></div>
+     </div>
+    </div>
   {{/each}}
-</div>
-
+  </div>

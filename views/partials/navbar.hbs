@@ -1,9 +1,9 @@
 	<!-- Header section -->
 	<header class="header-section">
-		<div class="container">
+		<div id="div-container-home" class="container">
 			<!-- logo -->
 			<a class="site-logo" href="/">
-				<img src="../img/logo.png" alt="">
+				<img src="../img/game4lifee.png" alt="">
 			</a>
 			<div class="user-panel">
 				<a href="login">ACCESS</a>  <!--/  <a href="login">Register</a>-->
@@ -18,19 +18,13 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="searchResults">Player List</a></li>
 					<li><a href="search">Search</a></li>
-          <li>
-          <a href="contact">Contact</a>
-          </li>
       {{#if session}}
         <li class="nav-item active">
-          <a class="nav-link" href="/profile">MyProfile <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/player">MyProfile <span class="sr-only">(current)</span></a>
         </li>
          <li class="nav-item active">
           <a class="nav-link" href="/logout">Click to Logout<span class="sr-only">(current)</span></a>
         </li>
-      <!--<li class="nav-item active">
-        <a class="nav-link" href="/player/{{session._id}}/edit">MyProfile <span class="sr-only">(current)</span></a>
-      </li>--><!--PRUEBA PROFILE-->
       {{/if}}
 
 			</ul>
