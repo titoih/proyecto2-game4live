@@ -315,8 +315,7 @@ ol {
 ---------------------*/
 
 .hero-slider .hs-item {
-	/*height: 865px;*/
-	height: 100vh;
+	height: 365px;
 	display: table;
 	width: 100%;
 }
@@ -407,6 +406,7 @@ ol {
 .hero-slider .owl-dots .owl-dot.active {
 	background: #ffb320;
 }
+
 
 /*---------------------
   Latest News section
@@ -1631,7 +1631,6 @@ ol {
 }
 
 #rightPanel{
-	min-height:415px;
 	background-image: url(../img/pattern.png);
 	background-repeat: repeat;
 	color: white;
@@ -1658,6 +1657,7 @@ background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5
 }
 
 /* carlos updated*/
+
 .white{
 	color:white;
 }
@@ -1707,4 +1707,22 @@ background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5
 	
 }
 
+.backgroundProfile{
+	height: 100px;  
+	width:101%
+}
+.profileImg{
+	height: 250px;  
+	width:100%
+}
+
 /* carlos updated*/
+.form-column-2 {
+	column-count: 2;
+}
+.label-player {
+	color: #f9b21f;
+}
+#img-flag {
+	width: 25px;
+}

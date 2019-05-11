@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="backgroundProfile">
+    <img class="profileImg" src="../img/{{player.game}}.jpg">
+  </div>
 <br>
 <br>
 	<div class="row" id="main">
@@ -8,7 +11,7 @@
                 	<div>
                 {{#if player.imgPath}}<img src="{{player.imgPath}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/if}}
         				{{#unless player.imgPath}} <img src="{{player.avatarURL}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/unless}}
-                  
+                
         			</div>
         		</div>
             </div>
@@ -20,45 +23,69 @@
          <form role="form" action="/player" method="POST" enctype="multipart/form-data">
 		     <h2>Nick: {{player.nick}}</h2>
 			     <hr class="colorgraph">
+           <div class="form-column-2">
 			          <div class="row">
 				          <div class="col-xs-12 col-sm-6 col-md-6">
 					          <div class="form-group">
-                      <label for="inputNick">Nick In Game: </label><label class="label-player">{{player.nickInGame}}</label>
+                      <label for="inputNick">Nick In Game:</label> <label class="label-player">  {{player.nickInGame}}</label>
                     </div>
 				          </div>
-				          <div class="col-xs-12 col-sm-6 col-md-6">
-					          <div class="form-group">
-                      <label for="inputNickName">Nick In Game</label>
-                      </div>
-				          </div>
-			          </div>
+				        </div>
      <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-6">
 		     <div class="form-group">
-          <label for="inputCountry">Country: </label><label class="label-player">{{player.country}}</label>
-                   </div>
+          <label for="inputCountry">Country:</label> <label class="label-player">  {{player.country}}</label> <img id="img-flag" src="../img/{{player.country}}.jpg">
           </div>
-     </div>
-      <div class="row">
-	     <div class="col-xs-12 col-sm-6 col-md-6">
-			<div class="form-group">
-      <label for="inputGame">Game</label><label class="label-player">{{player.game}}</label>
+          </div>
       </div>
-		</div>
-	</div>
-</div>
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label for="inputGame">Game:</label> <label class="label-player">  {{player.game}}</label>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <label for="inputGame">Level:</label> <label class="label-player">  {{player.game}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <label for="inputGame">Goal:</label> <label class="label-player">  {{player.goal}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <label for="inputGame">Language:</label> <label class="label-player">  {{player.language}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <label for="inputGame">Schedule:</label><label class="label-player">  {{player.schedule}}</label>
+          </div>
+        </div>
+      </div>
+       
 </div>
 	<hr class="colorgraph">
 	<div class="row">
-	     <div class="col-xs-12 col-md-6"><button id="button-player-account" class="btn btn-primary" type="submit">Save</button></div>
 	</div>
-          <!-- FORM -->
-          </form>
+  </div>
+  <a class="btn btn-primary" href="/searchResults">Back to the players list</a>
+
+    <!-- FORM -->
+    </form>
 </div>
 </div>
 </div>
 </div>
 </div>       
 </div>
-<a class="btn btn-primary" href="/searchResults">Back to the players list</a>
-<a class="btn btn-primary" href="/player/{{player._id}}/edit">Edit your profile</a>  
