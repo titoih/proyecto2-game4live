@@ -257,9 +257,10 @@ ol {
 
 .site-logo {
 	display: inline-block;
-	float:left;
-	padding-top: 6px;
 	width: 200px;
+	position: absolute;
+	left: 25%;
+	top: 7px;
 }
 
 .user-panel {
@@ -843,9 +844,33 @@ ol {
 	background: #252525;
 }
 
+.footer-section-nav {
+	clear: both;
+	background: #252525;
+
+}
+
 .footer-menu {
 	list-style: none;
 	float: right;
+}
+
+.footer-menu-nav {
+	list-style: none;
+	float: right;
+}
+
+.footer-menu-nav li {
+	display: inline;
+
+}
+
+.footer-menu-nav li a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #aeaeae;
+	margin-left: 30px;
 }
 
 .footer-menu li {
@@ -1564,7 +1589,8 @@ ol {
 .login-google{
   width:50%;
   background-color: #f8f9fa;
-  margin: auto;
+	margin: auto;
+	height: 100%;
 }
 
 .login-google-content {
@@ -1676,29 +1702,19 @@ background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5
 .avatar{
 	width:75px;
 	height:75px;
-	margin-left:35%;
 	position:relative;
 }
-.background{
-	background-image: url("../img/review-bg-2.jpg");
-	height:400px;
-	background-size:cover;
-	padding-top:50px;
-	
-}
-.fondo2{
-	background-image: url("../img/pattern.png");
-	background-repeat: repeat;
-	height: 1700px;
-	margin-top: 280px;
-}
+
 .headerCards{
-	background:rgba(173, 216, 230, 0.39);
 	margin-top:25px;
-	color:black;
+	color:white;
 }
 .center{
 	 text-align: center;
+}
+
+.fondo2 {
+	height: 400px;
 }
 .fondo3{
 	background-image: url("../img/pattern.png");
@@ -1725,4 +1741,28 @@ background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5
 }
 #img-flag {
 	width: 25px;
+}
+
+.div-content-search {
+	display: flex;
+  flex-direction: column;
+  background-image: url(../img/review-bg-2.jpg);
+  background-size: cover;
+}
+
+.div-form-search {
+	background-color: #13131391;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#form-home {
+	max-width: 400px;
+	margin: auto;
+}
+
+.panel-default {
+	background-image: url(../img/pattern.png);
+  background-repeat: repeat;
 }

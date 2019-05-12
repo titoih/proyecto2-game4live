@@ -1,23 +1,20 @@
-<!-- crear el formulario de búsqueda-->
-{{!-- players --}}
+<div class="div-content-search">
 <div class="card-heading col-md-12 white center">
   <h2 >Search Criteria</h2>
 </div>
 
-{{!-- players --}}
-<div class="background white"  style="center">
-
-<form action="/search" method="GET">
-  
-     <div class="form-group col-md-2">
+<div class="background white">
+  <div class="div-form-search">
+    <form id="form-search" action="/search" method="GET">
+    <div class="form-group col-md-2">
     <label for="inputNick">Nick</label>
     <input name="nick" type="text" class="form-control" id="inputNick" placeholder="Nick in game4life">
-  </div>
+    </div>
     <div class="form-group col-md-2">
     <label for="inputNickName">Nick In Game</label>
     <input name="nickInGame" type="text" class="form-control" id="inputNickInGame" placeholder="His Nick inside the game">
-  </div>
-   <div class="form-group col-md-2">
+    </div>
+    <div class="form-group col-md-2">
       <label for="inputCountry">Country</label>
       <select name="country" id="inputCountry" class="form-control">
         <option selected>Country</option>
@@ -35,7 +32,6 @@
         <option>CS:GO</option>
       </select>
     </div>
-  
     <div class="form-group col-md-2">
       <label for="inputLevel">Level ingame</label>
       <input  name="levelInGame" type="text" class="form-control" id="inputLevel" placeholder="85">
@@ -72,39 +68,37 @@
   <button type="submit" class="btn btn-primary btn-md">Search</button>
 </form>
 </div>
-{{!-- ss --}}
- 
-{{#if error}}
-  <div style="border:red solid 2px">{{error.message}}</div>
-{{/if}} 
+</div>
 {{#if players}}
   <div class="card-heading col-md-12 headerCards center" >
     <h2>Results</h2>
   </div>
 {{/if}} 
 {{#unless players}}
-  <div class="alert alert-warning" role="alert" style='margin-top:350px'>
-    <strong>No results</strong> try another criteria or go fuck yourself
+  <div class="alert alert-warning" role="alert">
+    <p><strong>No results</strong> No results. Please try again ;)</p>
   </div>
 {{/unless}} 
 <div class='fondo2'>
-  {{!-- segunda parte --}}
   {{#each players as |player|}}
     <div class="cards">
-     <div class="panel panel-default" style="background:grey">
-      <div style="background:rgba(56, 55, 55, 0.555)" class="panel-heading font-weight-bold center"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
-       {{#if avatarURL}}<div class="panel-body b"><img class="avatar img-circle" src="{{player.avatarURL}}"> </div>{{/if}} 
-       {{#unless avatarURL}}<div class="panel-body b"><img class="avatar img-circle"src="../img/watgranma.jpg"> </div>{{/unless}} 
+     <div class="panel panel-default">
+      <div class="panel-heading font-weight-bold center"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+    {{#if player.imgPath}}<div class="panel-body b"><img src="{{player.imgPath}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}
+    {{#unless player.imgPath}}{{#if player.avatarURL}}<div class="panel-body b"><img src="{{player.avatarURL}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}{{/unless}}       
+    {{#unless player.avatarURL}}<div class="panel-body b"><img class="avatar img-circle" src="../img/watgranma.jpg"> </div>{{/unless}} 
         <div class="panel-body"><a class="b">Nick In Game:</a> {{player.nickInGame}} </div>
         <div class="panel-body"><a class="b">Country:</a> {{player.country}}</div>
         <div class="panel-body "> <a class="b">Game:</a> {{player.game}} </div>
-        <div><a class="btn btn-primary btn-block" style="" href="/player/{{player._id}}">View profile</a></div>
+        <div><a class="btn btn-primary btn-block" href="/player/{{player._id}}">View profile</a></div>
      </div>
     </div>
   {{/each}}
   </div>
 </div>
+
 {{!-- <div>fondo2 --}}
 
 </div>
 
+</div>

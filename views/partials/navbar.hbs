@@ -16,16 +16,15 @@
 			<nav class="main-menu">
 				<ul>
 					<li><a href="/">Home</a></li>
-					<li><a href="/searchResults">Player List</a></li>
 					<li><a href="/search">Search</a></li>
-      {{#if session}}
-        <li class="nav-item active">
-          <a class="nav-link" href="/player">MyProfile <span class="sr-only">(current)</span></a>
-        </li>
+      		{{#if session}}
+        	<li class="nav-item active">
+          	<a class="nav-link" href="/player">MyProfile <span class="sr-only">(current)</span></a>
+        	</li>
          <li class="nav-item active">
           <a class="nav-link" href="/logout">Click to Logout<span class="sr-only">(current)</span></a>
         </li>
-      {{/if}}
+      	{{/if}}
 
 			</ul>
 			</nav>

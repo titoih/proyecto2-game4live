@@ -8,12 +8,12 @@
         <div class="col-md-4 well" id="leftPanel">
             <div class="row">
                 <div class="col-md-12">
-                	<div>
+                  <div>
                 {{#if player.imgPath}}<img src="{{player.imgPath}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/if}}
-        				{{#unless player.imgPath}} <img src="{{player.avatarURL}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/unless}}
-                
-        			</div>
-        		</div>
+        			  {{#unless player.imgPath}}{{#if player.avatarURL}}<img src="{{player.avatarURL}}" alt="Texto Alternativo" class="img-circle img-thumbnail">{{/if}}{{/unless}}       
+                {{#unless player.avatarURL}}<img class="img-circle img-thumbnail" src="../img/watgranma.jpg">{{/unless}} 
+                  </div>
+        	      </div>
             </div>
         </div>
         <div class="col-md-8 well" id="rightPanel">
@@ -69,7 +69,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <label for="inputGame">Schedule:</label><label class="label-player">  {{player.schedule}}</label>
+            <label for="inputGame">Schedule:</label> <label class="label-player">  {{player.schedule}}</label>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@
 	<div class="row">
 	</div>
   </div>
-  <a class="btn btn-primary" href="/searchResults">Back to the players list</a>
+  <a class="btn btn-primary" href="/search">Back to the players list</a>
 
     <!-- FORM -->
     </form>
