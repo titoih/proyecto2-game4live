@@ -4,7 +4,6 @@ const router = express.Router();
 const Player = require('../models/player.model');
 const searchController = require('../controllers/search.controller')
 
-router.get('/searchResults', searchController.list);
 router.get('/search', searchController.searchForm)
 
 

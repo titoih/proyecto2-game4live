@@ -33,7 +33,6 @@ module.exports.account = (req, res, next) => {
     const player = req.user;
     const { nick, nickInGame, country, game } = req.body;
 
-    console.log(req.file)
     function renderWithErrors(errors) {
       res.render('player/account', {
         player,

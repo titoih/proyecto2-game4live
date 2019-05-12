@@ -19,12 +19,11 @@ module.exports.searchForm = (req, res, next) => {
       {country:search.country},{game:search.game},{levelInGame: search.levelInGame},{goal: search.goal},{language: search.language},{schedule: search.schedule},]})
   
       .then( players => {
-        res.render('search/search', {players})
+        res.render('search/search', {players, search})
       })
       .catch(error => next(error)) 
      
     } else if(search.freeField) {
-      console.log('free')
           Player.find({$or:[{nick:search.freeField}, {nickInGame: search.freeField},
             {country:search.freeField},{game:search.freeField},{levelInGame: search.freeField},{goal: search.freeField},{language: search.freeField},{schedule: search.freeField},]})
               
@@ -34,7 +33,6 @@ module.exports.searchForm = (req, res, next) => {
             .catch(error => next(error))
 
       } else {
-        console.log('aqui entra')
       Player.find({})
       .then( players => {
         res.render('search/search', {players})

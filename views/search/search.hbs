@@ -8,16 +8,17 @@
     <form id="form-search" action="/search" method="GET">
     <div class="form-group col-md-2">
     <label for="inputNick">Nick</label>
-    <input name="nick" type="text" class="form-control" id="inputNick" placeholder="Nick in game4life">
+    <input name="nick" type="text" class="form-control" id="inputNick" placeholder="Nick in game4life" {{#if search.nick}} value="{{search.nick}}"{{/if}}>
     </div>
     <div class="form-group col-md-2">
     <label for="inputNickName">Nick In Game</label>
-    <input name="nickInGame" type="text" class="form-control" id="inputNickInGame" placeholder="His Nick inside the game">
+    <input name="nickInGame" type="text" class="form-control" id="inputNickInGame" placeholder="His Nick inside the game" {{#if search.nickInGame}} value="{{search.nickInGame}}"{{/if}}>
     </div>
     <div class="form-group col-md-2">
       <label for="inputCountry">Country</label>
       <select name="country" id="inputCountry" class="form-control">
-        <option selected>Country</option>
+        {{#unless search.country}}<option selected>Choose Country</option>{{/unless}}
+        {{#if search.country}}<option selected>{{search.country}}</option>{{/if}}
         <option>Spain</option>
         <option>France</option>
         <option>Germany</option>
@@ -26,7 +27,8 @@
       <div class="form-group col-md-2">
       <label for="inputGame">Game</label>
       <select name="game" id="inputGame" class="form-control">
-        <option selected>Choose Worm!</option>
+        {{#unless search.game}}<option selected>Choose Game</option>{{/unless}}
+        {{#if search.game}}<option selected>{{search.game}}</option>{{/if}}
         <option>Fortnite</option>
         <option>Clash Royale</option>
         <option>CS:GO</option>
@@ -39,7 +41,8 @@
     <div class="form-group col-md-2">
       <label for="inputGoal">Goal</label>
       <select name="goal" id="inputGoal" class="form-control">
-        <option selected>Choose Worm!</option>
+        {{#unless search.goal}}<option selected>Choose Goal</option>{{/unless}}
+        {{#if search.goal}}<option selected>{{search.goal}}</option>{{/if}}
         <option>Profesional</option>
         <option>Hardcore</option>
         <option>Casual</option>
@@ -48,7 +51,8 @@
   <div class="form-group col-md-2">
     <label for="languages">Language</label>
     <select id="inputLanguages" name="language" class="form-control">
-    <option selected>Choose Worm!</option>
+    {{#unless search.language}}<option selected>Choose Level</option>{{/unless}}
+    {{#if search.language}}<option selected>{{search.language}}</option>{{/if}}
     <option>ES</option>
     <option>ENG</option>
     <option>RU</option>
@@ -56,15 +60,15 @@
   </div>
 <div class="form-group col-md-2">
 <label for="schedule">Player schedule</label>
-<select class="custom-select" name="schedule">
-<option selected>Game Schedule</option>
+<select id="inputLanguages" class="form-control" name="schedule">
+{{#unless search.schedule}}<option selected>Choose Level</option>{{/unless}}
+{{#if search.schedule}}<option selected>{{search.schedule}}</option>{{/if}}
 <option>Morning</option>
 <option>Afternoon</option>
 <option>Night</option>
 </select>
 </div>
 <div class="form-group col-md-12">
-  <button type="reset" class="btn btn-warning">Reset</button>
   <button type="submit" class="btn btn-primary btn-md">Search</button>
 </form>
 </div>
