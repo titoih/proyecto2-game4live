@@ -47,7 +47,7 @@ const playerSchema = new mongoose.Schema({
       values: GAME_LIST,
       message: 'Choose a {PATH}'
     }
-  },
+  },/*
   levelInGame: {
     type: String,
   },
@@ -62,7 +62,7 @@ const playerSchema = new mongoose.Schema({
   schedule: {
     type: String,
     enum: SCHEDULES_LIST
-  },
+  },*/
   //incluyo valores de google API
   name: String,
   avatarURL: String,

@@ -14,9 +14,9 @@ module.exports.searchForm = (req, res, next) => {
     
     const search = req.query;
 
-    if(search.nick || search.nickInGame || search.country || search.game || search.levelInGame || search.goal || search.language || search.schedule ) {
+    if(search.nick || search.nickInGame || search.country || search.game ) {
       Player.find({$or:[{nick:search.nick}, {nickInGame: search.nickInGame},
-      {country:search.country},{game:search.game},{levelInGame: search.levelInGame},{goal: search.goal},{language: search.language},{schedule: search.schedule},]})
+      {country:search.country},{game:search.game}]})
   
       .then( players => {
         res.render('search/search', {players, search})
@@ -25,7 +25,7 @@ module.exports.searchForm = (req, res, next) => {
      
     } else if(search.freeField) {
           Player.find({$or:[{nick:search.freeField}, {nickInGame: search.freeField},
-            {country:search.freeField},{game:search.freeField},{levelInGame: search.freeField},{goal: search.freeField},{language: search.freeField},{schedule: search.freeField},]})
+            {country:search.freeField},{game:search.freeField}]})
               
             .then( players => {
               res.render('search/search', {players})

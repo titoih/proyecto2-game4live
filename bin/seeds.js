@@ -12,11 +12,7 @@ const Players =
    "nick": "julio iglesias",
    "nickInGame": "vividor",
    "country": "Spain",
-   "game": "CSGO",
-   "levelInGame": "213123",
-   "goal": "Hardcore",
-   "language": "ES",
-   "schedule": "Morning",
+   "game": "CSGO"
  },
 
  {
@@ -25,11 +21,7 @@ const Players =
    "nick": "fary",
    "nickInGame": "frania",
    "country": "Germany",
-   "game": "Fortnite",
-   "levelInGame": "213123",
-   "goal": "Hardcore",
-   "language": "ES",
-   "schedule": "Morning",
+   "game": "Fortnite"
  },
 
  {
@@ -38,11 +30,7 @@ const Players =
    "nick": "reshulon",
    "nickInGame": "reshulon69",
    "country": "Germany",
-   "game": "Fortnite",
-   "levelInGame": "213123",
-   "goal": "Casual",
-   "language": "ENG",
-   "schedule": "Night",
+   "game": "Fortnite"
  },
 
  {
@@ -51,11 +39,7 @@ const Players =
    "nick": "Gata",
    "nickInGame": "Gatita19",
    "country": "France",
-   "game": "Clash Royale",
-   "levelInGame": "213123",
-   "goal": "Hardcore",
-   "language": "RU",
-   "schedule": "Afternoon",
+   "game": "Clash Royale"
  },
  {
    "email": "234ew2543@hotmail.com",
@@ -63,11 +47,7 @@ const Players =
    "nick": "Dioni",
    "nickInGame": "inYourFce",
    "country": "Spain",
-   "game": "Clash Royale",
-   "levelInGame": "213123",
-   "goal": "Hardcore",
-   "language": "RU",
-   "schedule": "Afternoon",
+   "game": "Clash Royale"
  },
  {
    "email": "234q343@hotmail.com",
@@ -75,11 +55,7 @@ const Players =
    "nick": "xPeke",
    "nickInGame": "Fcking master",
    "country": "Spain",
-   "game": "CSGO",
-   "levelInGame": "213123",
-   "goal": "Hardcore",
-   "language": "ES",
-   "schedule": "Night",
+   "game": "CSGO"
  },
  {
    "email": "212e2e3@hotmail.com",
@@ -87,11 +63,7 @@ const Players =
    "nick": "Black Widow",
    "nickInGame": "Black Widow",
    "country": "Germany",
-   "game": "CSGO",
-   "levelInGame": "45",
-   "goal": "Hardcore",
-   "language": "ENG",
-   "schedule": "Night",
+   "game": "CSGO"
  },
  {
    "email": "21bb3@hotmail.com",
@@ -99,11 +71,7 @@ const Players =
    "nick": "Michael",
    "nickInGame": "Knight",
    "country": "Spain",
-   "game": "CSGO",
-   "levelInGame": "33",
-   "goal": "Hardcore",
-   "language": "ENG",
-   "schedule": "Afternoon",
+   "game": "CSGO"
  },
  {
    "email": "21bbu3@hotmail.com",
@@ -111,11 +79,7 @@ const Players =
    "nick": "Marta",
    "nickInGame": "Martii",
    "country": "Spain",
-   "game": "CSGO",
-   "levelInGame": "23",
-   "goal": "Casual",
-   "language": "ES",
-   "schedule": "Night",
+   "game": "CSGO"
  },
  {
    "email": "21wbu3@hotmail.com",
@@ -123,11 +87,7 @@ const Players =
    "nick": "Valariz3",
    "nickInGame": "valariz",
    "country": "Germany",
-   "game": "Fortnite",
-   "levelInGame": "53",
-   "goal": "Casual",
-   "language": "ENG",
-   "schedule": "Afternoon",
+   "game": "Fortnite"
  },
  {
    "email": "21wbur3@hotmail.com",
@@ -135,11 +95,7 @@ const Players =
    "nick": "estrambotico",
    "nickInGame": "Estrambotic",
    "country": "Germany",
-   "game": "Clash Royale",
-   "levelInGame": "13",
-   "goal": "Casual",
-   "language": "ENG",
-   "schedule": "Afternoon",
+   "game": "Clash Royale"
  },
 
 

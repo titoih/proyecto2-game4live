@@ -34,75 +34,37 @@
         <option>CS:GO</option>
       </select>
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputLevel">Level ingame</label>
-      <input  name="levelInGame" type="text" class="form-control" id="inputLevel" placeholder="85">
+    <div class="button-search">
+      <button type="submit" class="btn btn-primary btn-md">Search</button>
+        </form>
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputGoal">Goal</label>
-      <select name="goal" id="inputGoal" class="form-control">
-        {{#unless search.goal}}<option selected>Choose Goal</option>{{/unless}}
-        {{#if search.goal}}<option selected>{{search.goal}}</option>{{/if}}
-        <option>Profesional</option>
-        <option>Hardcore</option>
-        <option>Casual</option>
-      </select>
     </div>
-  <div class="form-group col-md-2">
-    <label for="languages">Language</label>
-    <select id="inputLanguages" name="language" class="form-control">
-    {{#unless search.language}}<option selected>Choose Level</option>{{/unless}}
-    {{#if search.language}}<option selected>{{search.language}}</option>{{/if}}
-    <option>ES</option>
-    <option>ENG</option>
-    <option>RU</option>
-    </select>
-  </div>
-<div class="form-group col-md-2">
-<label for="schedule">Player schedule</label>
-<select id="inputLanguages" class="form-control" name="schedule">
-{{#unless search.schedule}}<option selected>Choose Level</option>{{/unless}}
-{{#if search.schedule}}<option selected>{{search.schedule}}</option>{{/if}}
-<option>Morning</option>
-<option>Afternoon</option>
-<option>Night</option>
-</select>
-</div>
-<div class="form-group col-md-12">
-  <button type="submit" class="btn btn-primary btn-md">Search</button>
-</form>
-</div>
-</div>
-{{#if players}}
-  <div class="card-heading col-md-12 headerCards center" >
-    <h2>Results</h2>
-  </div>
-{{/if}} 
-{{#unless players}}
-  <div class="alert alert-warning" role="alert">
-    <p><strong>No results</strong> No results. Please try again ;)</p>
-  </div>
-{{/unless}} 
-<div class='fondo2'>
-  {{#each players as |player|}}
-    <div class="cards">
-     <div class="panel panel-default">
-      <div class="panel-heading font-weight-bold center"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
-    {{#if player.imgPath}}<div class="panel-body b"><img src="{{player.imgPath}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}
-    {{#unless player.imgPath}}{{#if player.avatarURL}}<div class="panel-body b"><img src="{{player.avatarURL}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}{{/unless}}       
-    {{#unless player.avatarURL}}<div class="panel-body b"><img class="avatar img-circle" src="../img/watgranma.jpg"> </div>{{/unless}} 
-        <div class="panel-body"><a class="b">Nick In Game:</a> {{player.nickInGame}} </div>
-        <div class="panel-body"><a class="b">Country:</a> {{player.country}}</div>
-        <div class="panel-body "> <a class="b">Game:</a> {{player.game}} </div>
-        <div><a class="btn btn-primary btn-block" href="/player/{{player._id}}">View profile</a></div>
-     </div>
-    </div>
-  {{/each}}
-  </div>
-</div>
-
-{{!-- <div>fondo2 --}}
-
-</div>
-
-</div>
+    {{#if players}}
+      <div class="card-heading col-md-12 headerCards center" >
+         <h2>Results</h2>
+      </div>
+    {{/if}} 
+    {{#unless players}}
+      <div class="alert alert-warning" role="alert">
+        <p><strong>No results</strong> No results. Please try again ;)</p>
+      </div>
+    {{/unless}} 
+    <div class='fondo2'>
+        {{#each players as |player|}}
+          <div class="cards">
+            <div class="panel panel-default">
+              <div class="panel-heading font-weight-bold center"><a href="/player/{{player._id}}">{{player.nick}}</a></div>
+                {{#if player.imgPath}}<div class="panel-body b"><img src="{{player.imgPath}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}
+                {{#unless player.imgPath}}{{#if player.avatarURL}}<div class="panel-body b"><img src="{{player.avatarURL}}" alt="Texto Alternativo" class="avatar img-circle"></div>{{/if}}{{/unless}}       
+                {{#unless player.avatarURL}}<div class="panel-body b"><img class="avatar img-circle" src="../img/watgranma.jpg"> </div>{{/unless}} 
+                  <div class="panel-body"><a class="b">Nick In Game:</a> {{player.nickInGame}} </div>
+                    <div class="panel-body"><a class="b">Country:</a> {{player.country}}</div>
+                      <div class="panel-body "> <a class="b">Game:</a> {{player.game}} </div>
+                        <div><a class="btn btn-primary btn-block" href="/player/{{player._id}}">View profile</a></div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>

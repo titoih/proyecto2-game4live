@@ -1749,12 +1749,26 @@ background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5
   background-image: url(../img/review-bg-2.jpg);
   background-size: cover;
 }
+.div-content-search h2 {
+	text-align: left;
+}
 
 .div-form-search {
 	background-color: #13131391;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+.button-search {
+	display: flex;
+}
+
+#form-search {
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	display: flex;
 }
 
 #form-home {
